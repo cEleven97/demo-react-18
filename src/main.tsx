@@ -6,9 +6,10 @@ import { createHashRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home/index.tsx'
 
 const router = createHashRouter([
-  { path: '/', Component: Home },
-  { path: 'page', Component: () => <div>Hello world!</div> },
+  { path: '/', element:<div>1</div> },
+  { path: 'page',element:<Home></Home> },
 ])
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <RouterProvider router={router}></RouterProvider>
